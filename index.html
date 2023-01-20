@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <title>Little Tea Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <img src="photos/logo.png" class="logo" alt="logo">
+            <div class="header-text">
+                <h1>A combination of nostalgia and elevated flavors in one, small cup.</h1>
+            </div>
+        </div>
+    </section>
+    <nav id="sideNav">
+        <ul>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#About">ABOUT US</a></li>
+            <li><a href="#Contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <img src="photos/hamburger.png" id="menuBtn" alt="menu-button">
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        
+        sideNav.style.right = "-350px";
+        menuBtn.onclick = function (){
+            if (sideNav.style.right == "-350px") {
+                sideNav.style.right = "0";
+            }
+            else{
+                sideNav.style.right = "-350px";
+            }
+        }
+        var scroll = new SmoothScroll('a[href*="#"]',{
+            speed: 1000,
+            speedAsDuration: true
+        });
+
+    </script>
+    <section id="menu">
+        <span class="rectangle"></span>
+        <h2>Explore our drinks</h2>
+        <div class="drinks">
+            <div class="article-container">
+                    <article class="article-card">
+                        <figure class="article-image">
+                            <img src="photos/brownsugar.png" alt="classic drink">
+                        </figure>
+                        <div class="article-content">
+                            <h2 class="card-title">The Classic</h2>
+                            <h3 class="card-description">Brown Sugar Milk Tea</h3>
+                            <p class="card-excerpt">Decadent brown sugar and caramel sauce with fragrant oolong milk tea. Paired with homemade egg pudding, perfect for a sweet tooth!</p>
+
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <figure class="article-image">
+                            <img src="photos/refresh.jpg" alt="refresher drink">
+                        </figure>
+                        <div class="article-content">
+                            <h2 class="card-title">The Refresher</h2>
+                            <h3 class="card-description">Strawberry and Guava Green Tea</h3>
+                            <p class="card-excerpt">Light, fragrant, refreshing. Fruity and tropical, a drink that restores you on a long, hot day. Real fruit juices locally sourced from California. Fragrant green tea leaves, steeped for 3-4minutes.</p>
+
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <figure class="article-image">
+                            <img src="photos/matcha.png" id="matcha" alt="matcha drink">
+                        </figure>
+                        <div class="article-content">
+                            <h2 class="card-title">The Energizer</h2>
+                            <h3 class="card-description">Matcha Milk Tea</h3>
+                            <p class="card-excerpt">Earthy, sweet, and milky. A drink that brings forth flavor and gradual energy. Made with our high quality organic matcha and homemade soymilk.</p>
+
+                        </div>
+                    </article>
+            </div>
+        </div>
+    </section>
+    <section id="About">
+        <span class="rectangle"></span>
+        <h2 id="section-headers">Our Mission</h2>
+        <p id="para-text">As a cafe, Little Tea Cup seeks to represent this nostalgia and foundation with high-quality ingredients and homemade items. Through elevated beverages, experience, and design we seek to inspire and uplift our local community. We hope you enjoy our Little Tea Cup!</p>
+        <img src="photos/chibi.png" id="picture-div">
+        <h2 id="section-headers">Our Story</h2>
+        <p id="para-text">Our founder Mimi Chen always felt that boba shops were a unique part of Asian American culture. Growing up, she always went to boba shops as a treat with her family to indulge in after a hearty dinner. With an emotional connection to this dessert, she wanted to live out her culinary and hospitality dreams by opening a cafe of her own. As a previous barista through college, she has made it a goal to use only fresh and real ingrediants that elevates and celebrates her childhood. <br> 
+            
+            <br>Now, Mimi seeks to continue to provide a unique and high quality beverage menu, pushing creativity within Little Tea Cup and spreading the joy she felt throughout her adolescence. </p>
+    </section>   
+    <section id="Contact">
+        <div class="contact-left-col">
+            <span class="rectangle"></span>
+            <div class="contact-text">
+                <h2 id="section-headers">Contact Us</h2>
+                <p id="para-text">If you have any questions or concerns that you would like to share with us, please fill out the form below.</p>
+                <div class="contact-box">
+                    <form>
+                        <input type="text" class="input-field" placeholder="Your Name">
+                        <input type="email" class="input-field" placeholder="Email">
+                        <input type="text" class="input-field" placeholder="Subject">
+                        <textarea type="text" class="input-field textarea-field" placeholder="Message"></textarea>
+                        <button type="button" class="btn">Send Message</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        <div class="contact-right-col">
+            <img src="photos/ponyo.png">
+        </div>
+    </section>
+    <footer class="footer">
+        <div id="address">
+            <p>The Little Tea Shop<br>
+                1234 Address Avenue<br>
+                San Diego, CA 92117</p>
+        </div>
+        <div id="hours">
+            <h3 id="our-hours">Our Hours</h3>
+            <p>Tuesday - Sunday<br>
+                11AM - 9PM</p>
+        </div>
+    </footer>
+</body>
+</html>
